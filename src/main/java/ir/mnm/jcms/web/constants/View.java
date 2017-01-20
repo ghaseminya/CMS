@@ -18,4 +18,10 @@ public class View {
 	public static final String SIGN_IN = "signin";
 	public static final String SIGN_UP = "signup";
 	public static final String SUCCESS = "success";
+
+
+	/*
+	Admin Pages
+	 */
+	public static final String admin_dashboard="admin/dashboard";
 }

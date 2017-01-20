@@ -1,26 +1,25 @@
 package ir.mnm.jcms.web;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpSession;
-
 import ir.mnm.jcms.domain.Article;
-import ir.mnm.jcms.service.ArticleService;
-import ir.mnm.jcms.service.MenuService;
-import ir.mnm.jcms.web.constants.View;
+import ir.mnm.jcms.domain.Setting;
 import ir.mnm.jcms.exception.NotFoundException;
+import ir.mnm.jcms.service.ArticleService;
 import ir.mnm.jcms.service.CategoryService;
+import ir.mnm.jcms.service.MenuService;
 import ir.mnm.jcms.service.TagService;
-import ir.mnm.jcms.web.constants.URL;
 import ir.mnm.jcms.web.constants.Common;
-
+import ir.mnm.jcms.web.constants.URL;
+import ir.mnm.jcms.web.constants.View;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Controller for home-page and static pages (about, contacts)
@@ -120,5 +119,14 @@ public class MainController {
 	public String contactsPage() {
 
 		return View.CONTACTS;
+	}
+
+	@Autowired
+	private Setting setting;
+	@RequestMapping(method = RequestMethod.GET, value = URL.Admin_dashboard)
+	public ModelAndView admin_dashboard_Page() {
+		return new ModelAndView(View.admin_dashboard)
+				.addObject("setting",setting )
+				.addObject("requestUrl", URL.Admin_dashboard);
 	}
 }

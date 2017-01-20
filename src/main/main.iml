@@ -7,5 +7,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:3.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:3.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-core:3.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:3.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:3.2.4.RELEASE" level="project" />
   </component>
 </module>

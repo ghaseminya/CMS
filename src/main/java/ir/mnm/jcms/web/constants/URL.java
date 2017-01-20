@@ -55,4 +55,10 @@ public class URL {
 	public static final String SEARCH_BY_TAG_CUSTOM_PAGE = "/tags/{name}/page/{number}";
 	public static final String SEARCH_BY_USER = "/user/{id}/articles";
 	public static final String SEARCH_BY_USER_CUSTOM_PAGE = "/user/{id}/articles/page/{number}";
+
+
+	/*
+	Admin urls
+	 */
+	public static final String Admin_dashboard="/admin/dashboard";
 }

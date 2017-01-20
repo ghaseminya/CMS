@@ -14,7 +14,13 @@
 	<!-- Database properties -->
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:/META-INF/database.properties" />
+		<property name="locations">
+			<list>
+				<value>classpath:/META-INF/database.properties</value>
+				<value>classpath:/META-INF/app.properties</value>
+			</list>
+		</property>
+		<property name="fileEncoding" value="UTF-8"/>
 	</bean>
 
 	<!-- Configuring a Connection pool dataSource -->

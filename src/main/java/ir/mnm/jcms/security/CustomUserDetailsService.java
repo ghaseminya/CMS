@@ -3,7 +3,7 @@ package ir.mnm.jcms.security;
 import java.util.Collection;
 import java.util.HashSet;
 
-import ir.mnm.jcms.domain.User;
+
 import ir.mnm.jcms.domain.UserRole;
 import ir.mnm.jcms.service.UserService;
 
@@ -37,7 +37,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException("User not found");
 		}
 		
-		User user = service.getByLogin(login);
+		ir.mnm.jcms.domain.User user = service.getByLogin(login);
 
 		if (user == null) {
 			throw new UsernameNotFoundException("User not found");
